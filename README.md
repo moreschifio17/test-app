@@ -1,7 +1,7 @@
 # Test
 ## About Test
 
-This is a web application framework with expressive, elegant syntax. 
+This is a web application framework with a small ABM. 
 
 # Repository
 
