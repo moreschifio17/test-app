@@ -65,7 +65,7 @@ php artisan serve
 ## Swagger 
 
 ```
-- composer require "darkaonline/l5-swagger"
+ composer require "darkaonline/l5-swagger"
 ```
 - open your config/app.php and add this line: 
 ```
