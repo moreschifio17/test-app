@@ -28,7 +28,7 @@ class ExampleTest extends TestCase
     public function test_producto_store()
     {
         $response = $this->post('api/producto', [
-            'prod_descripcion' => 'kit escolar',
+            'prod_descripcion' => 'articulos de limpieza',
             'prod_precioc' => 5000,
             'prod_preciov' => 9500,
         ]);
@@ -38,8 +38,8 @@ class ExampleTest extends TestCase
 
     public function test_producto_update()
     {
-        $response = $this->put('api/producto/7/1', [
-            'prod_descripcion' => 'kit',
+        $response = $this->put('api/producto/7', [
+            'prod_descripcion' => 'otros',
             'prod_precioc' => 5000,
             'prod_preciov' => 10000,
         ]);

@@ -9,5 +9,11 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
+    
+/**
+* @OA\Info(title="API Producto", version="1.0")
+*
+* @OA\Server(url="http://127.0.0.1:8000")
+*/
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }

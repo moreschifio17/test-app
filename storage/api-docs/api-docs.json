@@ -1,0 +1,272 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API Producto",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "http://127.0.0.1:8000"
+        }
+    ],
+    "paths": {
+        "/api/producto": {
+            "get": {
+                "summary": "index Productos",
+                "description": "index Producto",
+                "operationId": "0ae2747cdd1920ea98ae53f68e021678",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los productos."
+                    },
+                    "default": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Producto"
+                ],
+                "summary": "store Producto",
+                "operationId": "31a377e56d699faab358339be17a750e",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "": {
+                                        "properties": {
+                                            "prod_descripcion": {
+                                                "type": "string"
+                                            },
+                                            "prod_precioc": {
+                                                "type": "number"
+                                            },
+                                            "prod_preciov": {
+                                                "type": "number"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "prod_descripcion": "Utensilios",
+                                    "prod_precioc": 1000,
+                                    "prod_preciov": 2000
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "prod_id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "prod_descripcion": {
+                                            "type": "string",
+                                            "example": "Utensilios"
+                                        },
+                                        "prod_precioc": {
+                                            "type": "number",
+                                            "example": 1000
+                                        },
+                                        "prod_preciov": {
+                                            "type": "number",
+                                            "example": 2000
+                                        },
+                                        "updated_at": {
+                                            "type": "string",
+                                            "example": "2021-12-11T09:25:53.000000Z"
+                                        },
+                                        "created_at": {
+                                            "type": "string",
+                                            "example": "2021-12-11T09:25:53.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "invalid",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "msg": {
+                                            "type": "string",
+                                            "example": "Record not found"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/producto/1": {
+            "get": {
+                "summary": "show Productos",
+                "description": "show Producto",
+                "operationId": "f72bc9cc37f675d42b420958b1faa722",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar el producto por id."
+                    },
+                    "default": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/api/producto/2/edit": {
+            "head": {
+                "summary": "Edit Productos",
+                "description": "Edit Producto",
+                "operationId": "0fb9431ae6894220d81772ed8165fec7",
+                "responses": {
+                    "200": {
+                        "description": "Editar el producto por id"
+                    },
+                    "default": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/api/producto/{producto}": {
+            "put": {
+                "tags": [
+                    "Producto"
+                ],
+                "summary": "Update Producto",
+                "operationId": "f3b27a5c2688d2f35a57de62e8ed73d6",
+                "parameters": [
+                    {
+                        "name": "producto",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "": {
+                                        "properties": {
+                                            "prod_descripcion)": {
+                                                "type": "string"
+                                            },
+                                            "prod_precioc": {
+                                                "type": "number"
+                                            },
+                                            "prod_preciov": {
+                                                "type": "number"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "prod_descripcion": "Articulos p/ adultos",
+                                    "prod_precioc": 5000,
+                                    "prod_preciov": 10000
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "prod_id": {
+                                            "type": "number",
+                                            "example": 2
+                                        },
+                                        "prod_descripcion": {
+                                            "type": "string",
+                                            "example": "Articulos p/ adultos"
+                                        },
+                                        "prod_precioc": {
+                                            "type": "number",
+                                            "example": 5000
+                                        },
+                                        "prod_preciov": {
+                                            "type": "number",
+                                            "example": 10000
+                                        },
+                                        "updated_at": {
+                                            "type": "string",
+                                            "example": "2021-12-11T09:25:53.000000Z"
+                                        },
+                                        "created_at": {
+                                            "type": "string",
+                                            "example": "2021-12-11T09:25:53.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Producto"
+                ],
+                "summary": "Delete Producto",
+                "operationId": "14992c32ef6293d4742a8145f18498fb",
+                "parameters": [
+                    {
+                        "name": "producto",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "msg": {
+                                            "type": "string",
+                                            "example": "Delete producto success"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
