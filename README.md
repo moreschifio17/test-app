@@ -65,15 +65,15 @@ php artisan serve
 ## Swagger 
 
 ```
-1. composer require "darkaonline/l5-swagger"
+- composer require "darkaonline/l5-swagger"
 ```
-2. open your config/app.php and add this line: 
+- open your config/app.php and add this line: 
 ```
 L5Swagger\L5SwaggerServiceProvider::class
 
-3. php artisan vendor:publish --provider "L5Swagger\L5SwaggerServiceProvider"
+php artisan vendor:publish --provider "L5Swagger\L5SwaggerServiceProvider"
 ```
-4. Connect Database.
+- Connect Database.
 ```
-5. php artisan migrate:fresh --seed
+ php artisan migrate:fresh --seed
 ```
