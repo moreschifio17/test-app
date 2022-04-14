@@ -77,6 +77,6 @@ php artisan vendor:publish --provider "L5Swagger\L5SwaggerServiceProvider"
 ```
  php artisan migrate:fresh --seed
 ```
-##PHPUNIT (custom test)
+## PHPUNIT (custom test)
 ```
 php artisan test or vendor\bin\phpunit
